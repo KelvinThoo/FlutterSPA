@@ -9,7 +9,6 @@ class NavBarItemMobile extends ProviderWidget<NavBarItemModel> {
       padding: const EdgeInsets.only(left: 30, top: 60),
       child: Row(
         children: <Widget>[
-          Icon(model.iconData),
           SizedBox(
             width: 30,
           ),

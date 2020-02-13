@@ -6,6 +6,9 @@ import 'package:InformationWebsite/widgets/navigationMobile_drawer/navigation_dr
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
+import 'homeView_desktop.dart';
+import 'homeView_mobile.dart';
+
 class HomeView extends StatelessWidget {
   const HomeView({Key key}) : super(key: key);
 
@@ -18,17 +21,36 @@ class HomeView extends StatelessWidget {
             : null,
         backgroundColor: Colors.white,
         body: CenteredView(
-          child: Column(
-            children: <Widget>[
-              NavigationBar(),
-              Expanded(
-                  child: ScreenTypeLayout(
-                mobile: HomeContentMobile(),
-                desktop: HomeContentDesktop(),
-              ))
-            ],
+            child: Column(
+              children: <Widget>[
+                NavigationBar(),
+                SizedBox(
+                  height: 50,
+                ),
+                Expanded(
+                    child: ScreenTypeLayout.builder(
+                 mobile: (BuildContext context) => Container(
+                   child: Column(
+                     children: <Widget>[
+                       HomeContentMobile()
+                     ],
+                   ),
+                 ),
+                  desktop: (BuildContext context) => Container(
+                    child : SingleChildScrollView(
+                      child: Column(
+                        children: <Widget>[
+                          HomeContentDesktop(),
+                          HomeContentDesktop(),
+                          HomeContentDesktop(),
+                        ],
+                      ),
+                    )
+                  ),
+                ))
+              ],
+            ),
           ),
-        ),
       ),
     );
   }

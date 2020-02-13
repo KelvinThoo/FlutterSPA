@@ -1,6 +1,7 @@
 import 'package:InformationWebsite/widgets/nav/nav_logo.dart';
 import 'package:InformationWebsite/widgets/navbarItem/navbarItem.dart';
 import 'package:flutter/material.dart';
+import 'package:InformationWebsite/views/ChartView/chartview.dart';
 
 class NavigationBarTabletDesktop extends StatelessWidget {
   const NavigationBarTabletDesktop({Key key}) : super(key: key);
@@ -8,7 +9,7 @@ class NavigationBarTabletDesktop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 100,
+      height: 80,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
@@ -21,7 +22,14 @@ class NavigationBarTabletDesktop extends StatelessWidget {
           child :Row(
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
-              NavBarItem('Charts'),
+              FlatButton(
+                onPressed: (){
+                  Navigator.push(context,new MaterialPageRoute(builder: (context) => ChartPage()));
+                },
+                child : Text(
+                ('Charts'),
+                style: TextStyle(fontSize: 18),),
+              ),
               SizedBox(
                 width: 60,
               ),

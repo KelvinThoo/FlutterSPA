@@ -10,13 +10,17 @@ class HomeContentDesktop extends StatelessWidget {
     return Row(
       children: <Widget>[
         Expanded(
-        flex:4,
-        child:CourseDetails(),
+        flex:12,
+        child:Container(
+          height:600,
+          width:400,
+          alignment: Alignment(-1.0, 0),
+          child: CourseDetails()),
         ),
         Expanded(
           flex :3,
           child: Center(
-            child: StartBtn('Join Course'),
+            child: StartBtn('Get Started'),
           ),
         )
       ],
