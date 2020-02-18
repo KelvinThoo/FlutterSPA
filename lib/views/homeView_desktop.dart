@@ -7,23 +7,36 @@ class HomeContentDesktop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: <Widget>[
-        Expanded(
-        flex:12,
-        child:Container(
-          height:600,
-          width:400,
-          alignment: Alignment(-1.0, 0),
-          child: CourseDetails()),
-        ),
-        Expanded(
-          flex :3,
-          child: Center(
-            child: StartBtn('Get Started'),
-          ),
+    return Container(
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          begin:Alignment.topCenter,
+          end:Alignment.bottomCenter,
+          stops:[0.6,1],
+          colors: [Colors.white,Colors.blue]
         )
-      ],
+      ),
+      child: Row(
+        children: <Widget>[
+          Expanded(
+          flex:10,
+          child:Container(
+            height:600,
+            width:400,
+            alignment: Alignment(-1.0, 0),
+            child: Padding(
+              padding: const EdgeInsets.only(left:80.0,right:180.0),
+              child: CourseDetails(),
+            )),
+          ),
+          Expanded(
+            flex :5,
+            child: Center(
+              child: StartBtn('Get Started'),
+            ),
+          )
+        ],
+      ),
     );
   }
 }

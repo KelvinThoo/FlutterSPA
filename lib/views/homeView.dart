@@ -1,5 +1,9 @@
+import 'package:InformationWebsite/views/CardView/cardsViewDesktop.dart';
+import 'package:InformationWebsite/views/Footer/footerDesk.dart';
+import 'package:InformationWebsite/views/Footer/footerDesktop.dart';
 import 'package:InformationWebsite/views/homeView_desktop.dart';
 import 'package:InformationWebsite/views/homeView_mobile.dart';
+import 'package:InformationWebsite/widgets/centeredView/NavbarCenteredView.dart';
 import 'package:InformationWebsite/widgets/centeredView/centeredView.dart';
 import 'package:InformationWebsite/widgets/nav/nav.dart';
 import 'package:InformationWebsite/widgets/navigationMobile_drawer/navigation_drawer.dart';
@@ -20,15 +24,13 @@ class HomeView extends StatelessWidget {
             ? NavigationDrawer()
             : null,
         backgroundColor: Colors.white,
-        body: CenteredView(
+        body: Container(
+          child:ConstrainedBox(constraints: BoxConstraints(maxWidth: 1600),
             child: Column(
               children: <Widget>[
-                NavigationBar(),
-                SizedBox(
-                  height: 50,
-                ),
+                NavigationBar(),    
                 Expanded(
-                    child: ScreenTypeLayout.builder(
+                child: ScreenTypeLayout.builder(
                  mobile: (BuildContext context) => Container(
                    child: Column(
                      children: <Widget>[
@@ -37,13 +39,17 @@ class HomeView extends StatelessWidget {
                    ),
                  ),
                   desktop: (BuildContext context) => Container(
+                  
                     child : SingleChildScrollView(
-                      child: Column(
-                        children: <Widget>[
-                          HomeContentDesktop(),
-                          HomeContentDesktop(),
-                          HomeContentDesktop(),
-                        ],
+                      child: Padding(
+                        padding: const EdgeInsets.only(left:0.0,right:0.0),
+                        child: Column(
+                          children: <Widget>[
+                            HomeContentDesktop(),
+                            CardsViewDesk(),
+                            FooterDesk(),
+                          ],
+                        ),
                       ),
                     )
                   ),
@@ -51,6 +57,7 @@ class HomeView extends StatelessWidget {
               ],
             ),
           ),
+        )
       ),
     );
   }
