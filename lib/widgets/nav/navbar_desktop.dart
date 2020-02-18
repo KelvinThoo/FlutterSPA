@@ -1,3 +1,4 @@
+import 'package:InformationWebsite/views/AboutView/aboutView.dart';
 import 'package:InformationWebsite/widgets/nav/nav_logo.dart';
 import 'package:InformationWebsite/widgets/navbarItem/navbarItem.dart';
 import 'package:flutter/material.dart';
@@ -41,10 +42,17 @@ class NavigationBarTabletDesktop extends StatelessWidget {
                 SizedBox(
                   width: 40,
                 ),
-                NavBarItem('About'),
+                FlatButton(
+                  onPressed: (){
+                    Navigator.push(context,new MaterialPageRoute(builder: (context) => AboutView()));
+                  },
+                  child : Text(
+                  ('Charts'),
+                  style: TextStyle(fontSize: 18),),
+                  ),
                 ],
               ),
-          )
+            )
           ),
         ],
       ),

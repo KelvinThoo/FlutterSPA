@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:InformationWebsite/styles/text_styles.dart';
 
-class CourseDetails extends StatelessWidget {
-  const CourseDetails({Key key}) : super(key: key);
+class PieChartDetails extends StatelessWidget {
+  const PieChartDetails({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,13 +15,13 @@ class CourseDetails extends StatelessWidget {
                 : TextAlign.center;
 
         return Container(
-          width: 600,
+          width: 400,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Text(
-                'WELCOME\nTO THE "CHARTS"',
+                'Pie Chart',
                 style: titleTextStyle(sizingInformation.deviceScreenType),
                 textAlign: textAlignment,
               ),
@@ -29,7 +29,7 @@ class CourseDetails extends StatelessWidget {
                 height: 30,
               ),
               Text(
-                'In this website, you will be able to find all sorts of data you want provided with a chart view. To view some sample data click "Charts" on top of the website to get more details',
+                'A pie chart (or a circle chart) is a circular statistical graphic, which is divided into slices to illustrate numerical proportion. In a pie chart, the arc length of each slice (and consequently its central angle and area), is proportional to the quantity it represents.',
                 style: descriptionTextStyle(sizingInformation.deviceScreenType),
                 textAlign: textAlignment,
               )

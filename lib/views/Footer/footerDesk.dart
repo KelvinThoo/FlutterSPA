@@ -30,8 +30,7 @@ class FooterDesk extends StatelessWidget {
                     color:Colors.white,
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        child: Row(                       
                           children: <Widget>[
                             Align(
                               alignment: Alignment.topLeft,

@@ -60,6 +60,7 @@ flutter:
     - assets/HongKong.jpg
     - assets/NYStreet.jpg
     - assets/Rainbow.jpg
+    - assets/Pie_Chart.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
