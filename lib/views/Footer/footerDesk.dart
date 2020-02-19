@@ -54,14 +54,28 @@ class FooterDesk extends StatelessWidget {
                     child: Row(
                     children: <Widget>[
                       IconButton(
-                        icon:Image.asset("assets/ios.png"),
+                        icon:Image.asset("assets/Facebook.png"),
                         iconSize: 50,
                         onPressed: () {
-                        js.context.callMethod('alert',['Going to Apple??']);
+                        js.context.callMethod('open',['https://facebook.com']);
                         },
                       ),
                       IconButton(
+                        icon: Image.asset("assets/Twitter.png"),
+                        iconSize: 50, 
+                        onPressed: () {
+                        js.context.callMethod('open',['https://twitter.com']);
+                        }
+                      ),
+                      IconButton(
                         icon: Image.asset("assets/android.png"),
+                        iconSize: 50, 
+                        onPressed: () {
+                        js.context.callMethod('alert',['Going to Android??']);
+                        }
+                      ),
+                      IconButton(
+                        icon: Image.asset("assets/ios.png"),
                         iconSize: 50, 
                         onPressed: () {
                         js.context.callMethod('alert',['Going to Android??']);

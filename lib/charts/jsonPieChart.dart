@@ -60,7 +60,7 @@ class _JsonPieChartState extends State<JsonPieChart> {
             child:Column(
               children: <Widget>[
                 Text(
-                  "Json Data PieChart",
+                  "JavaScript PieChart",
                   style:TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,

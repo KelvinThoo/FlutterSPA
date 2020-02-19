@@ -47,7 +47,7 @@ class NavigationBarTabletDesktop extends StatelessWidget {
                     Navigator.push(context,new MaterialPageRoute(builder: (context) => AboutView()));
                   },
                   child : Text(
-                  ('Charts'),
+                  ('About'),
                   style: TextStyle(fontSize: 18),),
                   ),
                 ],

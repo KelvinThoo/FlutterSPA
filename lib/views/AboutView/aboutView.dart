@@ -1,4 +1,5 @@
 import 'package:InformationWebsite/views/AboutView/aboutViewDesktop.dart';
+import 'package:InformationWebsite/views/AboutView/aboutViewMobile.dart';
 import 'package:InformationWebsite/views/CardView/cardsViewDesktop.dart';
 import 'package:InformationWebsite/views/Footer/footerDesk.dart';
 import 'package:InformationWebsite/views/homeView_desktop.dart';
@@ -33,10 +34,12 @@ class AboutView extends StatelessWidget {
                 Expanded(
                 child: ScreenTypeLayout.builder(
                  mobile: (BuildContext context) => Container(
-                   child: Column(
-                     children: <Widget>[
-                       HomeContentMobile()
-                     ],
+                   child: SingleChildScrollView(
+                      child: Column(
+                       children: <Widget>[
+                         AboutPageMobile()
+                       ],
+                     ),
                    ),
                  ),
                   desktop: (BuildContext context) => Container(
