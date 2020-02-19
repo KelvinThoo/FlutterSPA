@@ -1,57 +1,49 @@
+import 'package:InformationWebsite/views/Footer/footerBox.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'dart:js' as js;
+import 'dart:ui' as ui;
 
-class FooterDesk extends StatelessWidget {
-  const FooterDesk({Key key}) : super(key: key);
+class FooterMobile extends StatefulWidget {
+  @override
+  _FooterMobileState createState() => _FooterMobileState();
+}
+
+class _FooterMobileState extends State<FooterMobile> {
+var screenwidth = ui.window.physicalSize.width / ui.window.devicePixelRatio;
+var screenheight = ui.window.physicalSize.height / ui.window.devicePixelRatio;
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      height:600,
+      height:screenheight/2,
       decoration: BoxDecoration(
         gradient: LinearGradient(
           begin:Alignment.topCenter,
           end:Alignment.bottomCenter,
           stops:[0.7,1],
-          colors: [Colors.blue[600],Colors.blue[100]]
+          colors: [Colors.blue[100],Colors.white]
         )
       ),
-      child: Row(
+      child: Column(
         children: <Widget>[
-          Expanded(
-          flex: 10,
+          Flexible(
+          flex: 5,
             child: Padding(
-              padding: const EdgeInsets.only(left:100.0,top:60.0),
+              padding: const EdgeInsets.only(left:50.0,top:60.0),
               child: Align(
                 alignment: Alignment.topLeft,
-                  child: Container(
-                    width: 500,
-                    height: 300,
-                    color:Colors.white,
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Row(                       
-                          children: <Widget>[
-                            Align(
-                              alignment: Alignment.topLeft,
-                                child: Text(
-                                  "Hi,Friendly reminder here............................................",
-                                  maxLines: 2,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
+                  child: FooterBox(),
                   ),
                 ),
           ),
             Expanded(
               flex:2,
                 child: Align(
-                  alignment: Alignment.bottomRight,
+                  alignment: Alignment.topCenter,
                     child: Container(
                     child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       IconButton(
                         icon:Image.asset("assets/Facebook.png"),
@@ -88,6 +80,6 @@ class FooterDesk extends StatelessWidget {
             )
             ],
           ),
-        );
-      }
-    }
+    );
+  }
+}

@@ -1,5 +1,6 @@
 import 'package:InformationWebsite/charts/barChart.dart';
 import 'package:InformationWebsite/charts/jsonPieChart.dart';
+import 'package:InformationWebsite/charts/pieChartHardCode.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'dart:ui' as ui;
@@ -63,7 +64,7 @@ class _ChartPageState extends State<ChartPage> with TickerProviderStateMixin {
                                 PieChartPage(),
                                 JsonPieChart(),
                                 BarChartPage(),
-                                PieChartPage(),
+                                PieChartPage2(),
                               ],
                             ),
                           ),

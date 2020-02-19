@@ -1,9 +1,9 @@
+import 'package:InformationWebsite/views/CardView/cardsView.dart';
 import 'package:InformationWebsite/views/CardView/cardsViewDesktop.dart';
 import 'package:InformationWebsite/views/Footer/footerDesk.dart';
+import 'package:InformationWebsite/views/Footer/footerMobile.dart';
 import 'package:InformationWebsite/views/homeView_desktop.dart';
 import 'package:InformationWebsite/views/homeView_mobile.dart';
-import 'package:InformationWebsite/widgets/centeredView/NavbarCenteredView.dart';
-import 'package:InformationWebsite/widgets/centeredView/centeredView.dart';
 import 'package:InformationWebsite/widgets/nav/nav.dart';
 import 'package:InformationWebsite/widgets/navigationMobile_drawer/navigation_drawer.dart';
 import 'package:flutter/material.dart';
@@ -34,10 +34,14 @@ class HomeView extends StatelessWidget {
                 Expanded(
                 child: ScreenTypeLayout.builder(
                  mobile: (BuildContext context) => Container(
-                   child: Column(
-                     children: <Widget>[
-                       HomeContentMobile()
-                     ],
+                   child: SingleChildScrollView(
+                      child: Column(
+                       children: <Widget>[
+                         HomeContentMobile(),
+                         CardsView(),
+                         FooterMobile()
+                       ],
+                     ),
                    ),
                  ),
                   desktop: (BuildContext context) => Container(
@@ -48,7 +52,7 @@ class HomeView extends StatelessWidget {
                         child: Column(
                           children: <Widget>[
                             HomeContentDesktop(),
-                            CardsViewDesk(),
+                            CardsView(),
                             FooterDesk(),
                           ],
                         ),

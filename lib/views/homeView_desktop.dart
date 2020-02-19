@@ -1,3 +1,4 @@
+import 'package:InformationWebsite/views/ChartView/chartview.dart';
 import 'package:InformationWebsite/widgets/startBtn/startBtn.dart';
 import 'package:InformationWebsite/widgets/websiteDetails/websiteDetails.dart';
 import 'package:flutter/material.dart';
@@ -32,7 +33,11 @@ class HomeContentDesktop extends StatelessWidget {
           Expanded(
             flex :5,
             child: Center(
-              child: StartBtn('Get Started'),
+              child: InkWell(
+                onTap: () {
+                  Navigator.push(context,new MaterialPageRoute(builder: (context) => ChartPage()));
+                },
+                child: StartBtn('Get Started')),
             ),
           )
         ],

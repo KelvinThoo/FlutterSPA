@@ -4,8 +4,6 @@ import 'package:InformationWebsite/views/CardView/cardsViewDesktop.dart';
 import 'package:InformationWebsite/views/Footer/footerDesk.dart';
 import 'package:InformationWebsite/views/homeView_desktop.dart';
 import 'package:InformationWebsite/views/homeView_mobile.dart';
-import 'package:InformationWebsite/widgets/centeredView/NavbarCenteredView.dart';
-import 'package:InformationWebsite/widgets/centeredView/centeredView.dart';
 import 'package:InformationWebsite/widgets/nav/nav.dart';
 import 'package:InformationWebsite/widgets/navigationMobile_drawer/navigation_drawer.dart';
 import 'package:flutter/material.dart';

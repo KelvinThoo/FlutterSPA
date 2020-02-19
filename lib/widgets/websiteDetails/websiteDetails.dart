@@ -17,7 +17,7 @@ class CourseDetails extends StatelessWidget {
         return Container(
           width: 600,
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Text(
