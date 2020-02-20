@@ -82,7 +82,7 @@ class _PieChartPage2State extends State<PieChartPage2> with TickerProviderStateM
                 Expanded(
                   child:charts.PieChart(
                     _seriesPieData,
-                    animate:true,
+                    animate:false,
                     animationDuration : Duration (seconds:2),
                     behaviors: [
                       new charts.DatumLegend(

@@ -65,8 +65,8 @@ initState() {
             child: FadeTransition(
               opacity: animation,
               child: Container(
-                width:screenwidth/1.2,
-                height:screenheight/1.2,
+                width:screenwidth/1.4,
+                height:screenheight/1.4,
                 child: Image.asset("assets/Charts.png")
                     )
                   )

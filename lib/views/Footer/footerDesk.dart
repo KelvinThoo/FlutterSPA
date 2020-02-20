@@ -47,11 +47,12 @@ class FooterDesk extends StatelessWidget {
                 ),
           ),
             Expanded(
-              flex:2,
+              flex:3,
                 child: Align(
                   alignment: Alignment.bottomRight,
                     child: Container(
                     child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: <Widget>[
                       IconButton(
                         icon:Image.asset("assets/Facebook.png"),

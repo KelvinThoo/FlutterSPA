@@ -132,7 +132,7 @@ class _ChartPageState extends State<ChartPage> with TickerProviderStateMixin {
                padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 10.0),
                child: Row(
                  children: <Widget>[
-                   Icon(FontAwesomeIcons.solidChartBar),
+                   Icon(FontAwesomeIcons.chartPie),
                    SizedBox(width: 8),
                    Flexible(
                        child: Container(   
@@ -166,7 +166,7 @@ class _ChartPageState extends State<ChartPage> with TickerProviderStateMixin {
                      Flexible(
                        child: Container(   
                          child: AutoSizeText(
-                           "Pie Chart Sample",
+                           "Json Bar Chart Sample",
                            maxLines: 1,
                            overflow: TextOverflow.fade,
                            style: TextStyle(fontSize: 18),
@@ -190,12 +190,12 @@ class _ChartPageState extends State<ChartPage> with TickerProviderStateMixin {
                padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 10.0),
                child: Row(
                  children: <Widget>[
-                   Icon(FontAwesomeIcons.solidChartBar),
+                   Icon(FontAwesomeIcons.chartPie),
                    SizedBox(width: 8),
                   Flexible(
                        child: Container(   
                          child: AutoSizeText(
-                           "Pie Chart Sample 2",
+                           "Hardcoded-Data Pie Chart",
                            maxLines: 1,
                            overflow: TextOverflow.fade,
                            style: TextStyle(fontSize: 18),

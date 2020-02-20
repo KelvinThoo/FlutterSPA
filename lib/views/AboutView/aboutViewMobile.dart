@@ -50,18 +50,28 @@ initState() {
             ),
          child: Column(
           children: <Widget>[
-            Container(
-              child: Padding(
-                padding: const EdgeInsets.only(top:30.0),
-                child: AboutChartDetails(),
-              ),
+            Flexible(
+              flex:4,
+              child: Container(
+                child: Padding(
+                  padding: const EdgeInsets.only(top:30.0),
+                  child: AboutChartDetails(),
+                      ),
+                    ),
                   ),
+            Expanded(
+              flex: 6,
+              child: Container(
+                width: screenwidth/2,
+                height: screenheight/2,
+                child: new Image.asset("assets/Charts.png"),
+                    )
+                  )
                 ],
               ),
             ),
-            
           Container(
-            height:screenheight,
+            height:screenheight/2,
             width: screenwidth,
             decoration: BoxDecoration(
             gradient: LinearGradient(
@@ -91,10 +101,19 @@ initState() {
                 ),
                child:Column(
                 children: <Widget>[
-                  Container(
-                    height: screenheight,                 
-                      child: PieChartDetails()
+                  Expanded(
+                     child: Container(
+                      height: screenheight,                 
+                        child: PieChartDetails()
+                    ),
                   ),
+                  Expanded(
+                    child: Container(
+                      width: screenwidth/2,
+                      height: screenheight/2,
+                        child: new Image.asset("assets/Pie_Chart.png")
+                    ),
+                  )
                 
                   ],
                 )
@@ -112,10 +131,19 @@ initState() {
                 ),
                child:Column(
                 children: <Widget>[
-                  Container(
-                    height: screenheight,
-                      child: BarChartDetails()
-                ), 
+                  Expanded(
+                    child: Container(
+                      height: screenheight,
+                        child: BarChartDetails()
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      width:screenwidth/2,
+                      height: screenheight/2,
+                      child: new Image.asset("assets/Bar_Chart.png"),
+                  ),
+                )
               ],
             )
           ),
